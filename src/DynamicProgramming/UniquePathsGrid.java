@@ -3,71 +3,70 @@ package DynamicProgramming;
 import java.util.Arrays;
 
 public class UniquePathsGrid {
-    static int countWaysUtil(int m, int n, int[][] dp) {
 
-        for(int i=0; i<m ;i++){
-            for(int j=0; j<n; j++){
+    public static int uniquePathsRecursion(int m, int n) {
+        return recursiveWay(0, 0, m, n);
+    }
 
-                //base condition
-                if(i==0 && j==0){
-                    dp[i][j]=1;
-                    continue;
-                }
+    public static int recursiveWay(int i, int j, int m, int n) {
+        if(i==m-1 && j == n-1)
+            return 1;
+        if(i >= m  || j >= n)
+            return 0;
 
-                int up=0;
-                int left = 0;
+        int row = recursiveWay(i+1, j, m, n);
+        int column = recursiveWay(i, j+1, m, n);
 
-                if(i>0)
-                    up = dp[i-1][j];
-                if(j>0)
-                    left = dp[i][j-1];
+        return row+column;
+    }
 
-                dp[i][j] = up+left;
+    public static int uniquePaths(int m, int n) {
+
+        int dp[][] = new int[m][n];
+
+        for(int i=0;i<m;i++) {
+            dp[i][0] = 1;
+        }
+        for(int j=0;j<n;j++) {
+            dp[0][j] = 1;
+        }
+
+        for(int i=1;i<m;i++) {
+            for(int j=1;j<n;j++) {
+                dp[i][j] = dp[i-1][j] + dp[i][j-1];
             }
         }
 
         return dp[m-1][n-1];
-
     }
 
-    public static int countWaysOptimizedSpace(int m, int n) {
+    public int uniquePathsSpaceOptimized(int m, int n) {
+
         int prev[] = new int[n];
+        int cur[] = new int[n];
 
-        for(int i=0;i<m;i++) {
-            int temp[] = new int[n];
-            for(int j=0;j<n;j++) {
-                if(i==0 && j==0) {
-                    temp[j] = 1;
-                    continue;
-                }
-                int up = 0;
-                int left = 0;
-                if(i > 0)
-                    up = prev[j];
-                if(j > 0)
-                    left = temp[j-1];
-
-                temp[j] = up + left;
-            }
-            prev = temp;
+        for(int j=0;j<n;j++) {
+            prev[j] = 1;
         }
+
+        for(int i=1;i<m;i++) {
+            cur[0] = 1;
+            for(int j=1;j<n;j++) {
+                cur[j] = prev[j] + cur[j-1];
+            }
+            prev = (int[]) cur.clone();
+        }
+
         return prev[n-1];
     }
 
-
-    static int countWays(int m, int n){
-        int dp[][]=new int[m][n];
-        for (int[] row : dp)
-            Arrays.fill(row, -1);
-        return countWaysUtil(m,n,dp);
-
-    }
-
     public static void main(String args[]) {
+        /**
+         * EXPLANATION IN ARRAY PACKAGE, UNIQUE PATHS.
+         */
+        int m=1;
+        int n=3;
 
-        int m=3;
-        int n=2;
-
-        System.out.println(countWays(m,n));
+        uniquePaths(m, n);
     }
 }

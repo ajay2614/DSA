@@ -64,7 +64,7 @@ public class SetMatrixZeroes {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         WHAT WE HAVE TO DO IF WE FOUND ANY ZERO IN MATRIX, WE NEED TO CONVERT ITS ROWS AND COLUMNS TO 0
 
         IN INTERVIEW USE OPTIMAL APPROACH FIRST, AFTER THAT USE MOST OPTIMAL ONE
