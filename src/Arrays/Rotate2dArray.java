@@ -2,8 +2,8 @@ package Arrays;
 
 public class Rotate2dArray {
 
-    /*
-    TC : O(N*N) + O(N*N)
+    /**
+      * TC : O(N*N) + O(N*N)
      */
     public static void rotate(int[][] matrix) {
 
@@ -27,7 +27,7 @@ public class Rotate2dArray {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION IS THAT WE NEED TO ROTATE ARRAY
 
         THE WAY IS TO FIRST GET THE TRANSPOSE, AND THEN RUN A FOR LOOP TO SWAP THE ELEMENTS

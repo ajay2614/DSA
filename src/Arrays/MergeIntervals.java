@@ -46,7 +46,7 @@ public class MergeIntervals {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION STATES THAT WE ARE GIVEN 2D ARRAY WITH N ROWS AND J COLUMNS, WE HAVE TO RETURN 2 ARRAY, HAVING
         NO OVERLAPPING INTERVALS, FOR EG 1,3 AND 2,6  3 > 2, HENCE WE NEED TO MERGE THEM 1 6.
 

@@ -20,7 +20,7 @@ public class MergeTwoSortedArray {
 
                 int first = nums2[0];
 
-                /*
+                /**
                 Following Insertion Sort
                  */
 
@@ -37,7 +37,7 @@ public class MergeTwoSortedArray {
         }
 
     }
-    /*
+    /**
     TC->BIG O(N+M)LOG(N+M)
     SC->BIG O(1)
      */
@@ -87,7 +87,7 @@ public class MergeTwoSortedArray {
 
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION STATES THAT WE HAVE TO MERGE TWO SORTED ARRAYS.
 
         BRUTE APPROACH

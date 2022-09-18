@@ -40,7 +40,7 @@ public class NextPermutation {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION STATES THAT WE ARE GIVEN AN ARRAY, WE HAVE TO FIND ITS NEXT PERMUTATION, EG 1 2 3 -> 1 3 2
 
         THE APPROACH IS--

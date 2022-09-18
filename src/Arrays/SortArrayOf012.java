@@ -1,7 +1,7 @@
 package Arrays;
 
 public class SortArrayOf012 {
-    /*
+    /**
     TC BIG O(2N)
      */
     public void sortColorsBrute(int[] nums) {

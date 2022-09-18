@@ -17,7 +17,7 @@ public class MaximumSubArray {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         FOLLOWING SOLUTION IMPLEMENTS KADANES ALGO
 
         WE TAKE INITIAL SUM = 0, WE RUN FOR LOOP AND ADD INDEX AND COMPUTE MAX RESULT, IF WE FOUND SUM LESSER THAN 0,

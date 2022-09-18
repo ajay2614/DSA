@@ -95,7 +95,7 @@ public class MissingAndRepeatingNumber {
 
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION HAS A REPEATING NUMBER AND A MISSING NUMBER, WE NEED TO IDENTIFY THESE
 
         1ST APPROACH, MUCH EASIER TO EXPLAIN APPROACH, ALWAYS GO WITH THIS IN INTERVIEW

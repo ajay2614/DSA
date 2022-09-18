@@ -26,7 +26,7 @@ public class PascalTriangle {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         WE HAVE TO CREATE A PASCAL TRIANGLE FROM GIVEN NUMBER OF ROWS
         EG FOR ROW 4 PASCAL WOULD BE
                 1
