@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * QUESTION NAMED MAXIMUM ACTIVITIES IS ALSO EXACT SAME
+ */
 class Meeting {
     int start;
     int end;
@@ -36,6 +39,10 @@ class MeetingSort implements Comparator<Meeting> {
     }
 }
 public class NMeetingsInOneRoom {
+    /**
+     * TC : O(N) +O(N LOG N) + O(N) ~O(N LOG N)
+     * SC : BIG O(N)
+     */
     public static int maxMeetings(int start[], int end[], int n) {
         List<Meeting> meetings = new ArrayList<>();
 

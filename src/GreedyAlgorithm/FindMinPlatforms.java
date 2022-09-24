@@ -3,6 +3,10 @@ package GreedyAlgorithm;
 import java.util.Arrays;
 
 public class FindMinPlatforms {
+    /**
+     * TC : BIG O(N LOG N) + O(N LOG N) + BIG O(N)
+     * SC : BIG O(1)
+     */
     public static int findPlatform(int arr[], int dep[], int n) {
 
         Arrays.sort(arr);
