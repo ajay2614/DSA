@@ -59,7 +59,7 @@ public class SubsetSumEqualK {
 
     public static void main(String args[]) {
 
-        /*
+        /**
         https://www.youtube.com/watch?v=s6FhG--P7z0&t=17s
         understand properly from here
          */
