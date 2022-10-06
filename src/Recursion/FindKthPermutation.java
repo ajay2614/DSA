@@ -39,11 +39,11 @@ public class FindKthPermutation {
     }
 
 
-    public String getPermutation(int n, int k) {
+    public static String getPermutation(int n, int k) {
 
         List<Integer> arr = new ArrayList<>();
         int fact = 1;
-        for(int i=0;i<n;i++) {
+        for(int i=1;i<n;i++) {
             fact *= i;
             arr.add(i);
         }
@@ -134,8 +134,9 @@ public class FindKthPermutation {
          * UPDATE K AS K%FACT
          * UPDATE FACT AS FACT/ARR.SIZE()
          */
-        int n = 3, k = 3;
-        String ans = getPermutationBrute(n, k);
+        int n = 4, k = 17;
+    //    String ans = getPermutationBrute(n, k);
+        String ans = getPermutation(n, k);
         System.out.println("The Kth permutation sequence is " + ans);
     }
 }
