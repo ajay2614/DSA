@@ -1,6 +1,12 @@
 package Recursion;
 
 public class SolveSudoku {
+
+    /**
+     * Time Complexity: O(9(n ^ 2)), in the worst case, for each cell in the n2 board, we have 9 possible numbers.
+     *
+     * Space Complexity: O(1), since we are refilling the given board itself, there is no extra space required, so constant space complexity.
+     */
     public void solveSudoku(char[][] board) {
         recursion(board, board.length, board[0].length);
     }

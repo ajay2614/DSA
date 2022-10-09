@@ -8,6 +8,18 @@ TOUGH AND IMPORTANT
  */
 public class FindKthPermutation {
 
+    /**
+     *
+     * Time complexity: O(N! * N) +O(N! Log N!)
+     *
+     * Reason: The recursion takes O(N!)  time because we generate every possible permutation and another O(N)  time is required
+     * to make a deep copy and store every sequence in the data structure. Also, O(N! Log N!)  time required to sort the data
+     * structure.
+     *
+     * Space complexity: O(N)
+     *
+     * Reason: Result stored in a vector, we are auxiliary space taken by recursion
+     */
     public static String getPermutationBrute(int n, int k) {
         List<String> ans = new ArrayList<>();
         String s = "";
@@ -39,6 +51,16 @@ public class FindKthPermutation {
     }
 
 
+    /**
+     * Time Complexity: O(N) * O(N) = O(N^2)
+     *
+     * Reason: We are placing N numbers in N positions. This will take O(N) time. For every number, we are reducing the search
+     * space by removing the element already placed in the previous step. This takes another O(N) time.
+     *
+     * Space Complexity: O(N)
+     *
+     * Reason: We are storing  the numbers in a data structure(here vector)
+     */
     public static String getPermutation(int n, int k) {
 
         List<Integer> arr = new ArrayList<>();

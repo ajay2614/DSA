@@ -6,6 +6,14 @@ import java.util.List;
 import java.util.Arrays;
 public class Subsets2 {
 
+    /**
+     * Time Complexity: O( 2^n *(k log (x) )). 2^n  for generating every subset and k* log( x)  to insert every combination
+     * of average length k in a set of size x. After this, we have to convert the set of combinations back into a list of list
+     * which takes more time.
+     *
+     * Space Complexity:  O(2^n * k) to store every subset of average length k. Since we are initially using a set to
+     * store the answer another O(2^n *k) is also used.
+     */
     public static List<List<Integer>> subsetsWithDupBruteForce(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         HashSet<List<Integer>> listHashSet = new HashSet<>();
@@ -29,6 +37,13 @@ public class Subsets2 {
         recursion(a, ans, arr, n, ind+1);
     }
 
+    /**
+     * Time Complexity: O(2^n) for generating every subset and O(k)  to insert every subset in another data structure if
+     * the average length of every subset is k. Overall O(k * 2^n).
+     *
+     * Space Complexity: O(2^n * k) to store every subset of average length k. Auxiliary space is O(n)  if n is the depth
+     * of the recursion tree.
+     */
     public static List<List<Integer>> subsetsWithDup(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> ans = new ArrayList<>();

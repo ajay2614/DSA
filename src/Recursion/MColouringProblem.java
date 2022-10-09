@@ -2,6 +2,11 @@ package Recursion;
 
 public class MColouringProblem {
 
+    /**
+     * Time Complexity: O(N^M) (n raised to m)
+     *
+     * Space Complexity: O(N)
+     */
     public boolean graphColoring(boolean graph[][], int m, int n) {
         int colour[] = new int[n];
         return recursion(graph, m, colour, n, 0);

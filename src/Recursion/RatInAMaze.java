@@ -4,6 +4,11 @@ import java.util.ArrayList;
 
 public class RatInAMaze {
 
+    /**
+     * Time Complexity: O(4^(m*n)), because on every cell we need to try 4 different directions.
+     *
+     * Space Complexity:  O(m*n) ,Maximum Depth of the recursion tree(auxiliary space).
+     */
     public static void recursion(int[][] m, int n, int arr[][], int i, int j,
                                  ArrayList<String> ans, String str) {
         if (i == n - 1 && j == n - 1) {

@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Permutations {
+    /**
+     * Time Complexity:  N! x N
+     *
+     * Space Complexity:  O(1)
+     */
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
         recursion(ans, nums, nums.length, 0);

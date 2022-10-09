@@ -5,6 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 public class NQueens {
+
+    /**
+     * Time Complexity: Exponential in nature since we are trying out all ways, to be precise it is O(N! * N).
+     *
+     * Space Complexity: O(N)
+     */
+
     public List<List<String>> solveNQueens(int n) {
         List<List<String>> ans = new ArrayList<>();
         char arr[][] = new char[n][n];
