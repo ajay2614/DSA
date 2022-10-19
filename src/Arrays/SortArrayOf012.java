@@ -31,7 +31,7 @@ public class SortArrayOf012 {
             }
         }
     }
-    /*
+    /**
     TC BIG O(N)
      */
 
@@ -70,7 +70,7 @@ public class SortArrayOf012 {
     }
 
     public static void main(String[] args) {
-        /*
+        /**
         THE QUESTION IS GIVEN AS ARRAY OF 0 1 & 2 WE NEED TO SORT IT
 
         FOR OPTIMAL APPROACH WE FOLLOW A VARIATION OF DUTCH NATIONAL FLAG,
@@ -87,6 +87,11 @@ public class SortArrayOf012 {
         WHY MID<=HI AND NOT MID<HI, BECAUSE A TESTCASE LIKE 2 0 1 CAN ARISE
         HERE FIRST TIME HI WOULD BECOME 1 FROM 2 AND ARRAY WOULD BECOME 1 0 2, NOW AS 1 ARRIVES, MID WILL ONLY INCREMENT
         AND BECOME EQUAL TO HI, HENCE FINAL ANSWER WOULD FAIL.
+         */
+
+        /**
+         * WHY WE WROTE BREAK IN SWITCH, BECAUSE THE WORKING OF SWITCH IS IN SUCH A WAY, ONCE IF A CASE GETS EQUAL/EXECUTED
+         * THEN IF WE DON'T WRITE BREAK, THEN ALL THE NEXT SWITCH STATEMENTS WILL ALSO GET EXECUTED.
          */
 
         int arr[] = {2,0,1};

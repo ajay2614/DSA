@@ -40,7 +40,7 @@ public class MergeIntervals {
         arrayList.add(new int[]{first,second});
         return arrayList.toArray(new int[0][]);
 
-        /*
+        /**
         can also be arrayList.toArray(new int[arrayList.size()][2]);
          */
     }
