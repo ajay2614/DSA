@@ -46,6 +46,10 @@ public class WordBreak {
                 String part = s.substring(i, j+1);
                 if(wordDict.contains(part) && dp[j+1] == true){
                     dp[i] = true;
+                    /*passing testcases without break too, but we will use break as for eg leetcode, it would check for leet
+                    which is from i as 0 and j as 3 and will check from j+1 if it is true, if it is it will update
+                    dp[i] and since no point in checking for leetc or leetco so we are breaking.
+                    */
                     break;
                 }
             }

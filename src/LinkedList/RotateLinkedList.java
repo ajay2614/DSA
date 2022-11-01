@@ -44,7 +44,8 @@ public class RotateLinkedList {
         }
 
         k = k % count;
-
+        if(k == 0)
+            return head;
         cur.next = head;
         count = count - k;
         while(count != 0) {

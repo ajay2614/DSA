@@ -108,7 +108,7 @@ public class LengthOfLongestSubstring {
          *
          * FOR EG FOR B C A A C D E , WE KNOW THAT ACDE IS MAX AS BCA IS SMALLER AND BCAA DOEST HAVE UNIQUE CHARACTER
          *
-         * TILL R 2, OUR MAX LENGTH WOULD BE 3 AND THE CHARATERS IN SET WOULD BE BCA,
+         * TILL R 2, OUR MAX LENGTH WOULD BE 3 AND THE CHARACTERS IN SET WOULD BE BCA,
          *
          * NOW WHEN WE GET A AT R3 WE KNOW THAT THIS ELEMENT IS REPEATING HENCE WE WANT TO FIND WHERE THE OCCURANCE OF
          * LAST A WAS BEFORE CURRENT A SO WE CAN REMOVE AND GET THE LENGTH
@@ -139,6 +139,13 @@ public class LengthOfLongestSubstring {
          *
          *
          *
+         */
+
+        /**
+         * WHY TAKE MAX OF map.get(s.charAt(r)) + 1, l AND NOT JUST MAP.GET(S.CHARAT(R) + 1)
+         *
+         * POSSIBLE TEST CASE ABBA : NOW HERE WHEN WE WILL REACH A OF 3RD INDEX, L WOULD BE 3 AND S.CHARAT(R) WOULD BE 1
+         * SO WE CAN SIMPLY TAKE L AS THAT SUBARRAY IS NOT HAVING ANY REPEATING CHARACTER.
          */
         String s = "aab";
         lengthOfLongestSubstringBruteForce(s);

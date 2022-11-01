@@ -25,6 +25,15 @@ public class NodeFlatten {
         return root;
     }
 
+    /**
+     * Time Complexity: O(N), where N is the total number of nodes present
+     *
+     * Reason: We are visiting all the nodes present in the given list.
+     *
+     * Space Complexity: O(1)
+     *
+     * Reason: We are not creating new nodes or using any other data structure.
+     */
     public Node merge(Node cur, Node nex) {
         Node node = new Node(0);
         Node temp = node;
@@ -48,6 +57,25 @@ public class NodeFlatten {
             temp.bottom = nex;
 
         return node.bottom;
+    }
+
+    Node mergeAlternate(Node n1, Node n2) {
+        n1.next = null;
+        Node res = n1;
+        while(n1 != null && n2 != null) {
+            Node cur = null;
+            while(n1 != null && n1.data <= n2.data) {
+                cur = n1;
+                n1 = n1.bottom;
+            }
+
+            cur.bottom = n2;
+
+            Node temp = n1;
+            n1 = n2;
+            n2 = temp;
+        }
+        return res;
     }
 
     /**
