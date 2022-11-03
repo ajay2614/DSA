@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class LargestRectangleInHistogram {
 
-    /*
+    /**
     always start with brute force, then second best, use the best one only if required
      */
 
@@ -33,7 +33,7 @@ public class LargestRectangleInHistogram {
         return area;
     }
 
-    public int largestRectangleArea2ndBestSolution(int[] heights) {
+    public static int largestRectangleArea2ndBestSolution(int[] heights) {
         Stack<Integer> st = new Stack<>();
 
         int n = heights.length;
@@ -114,8 +114,11 @@ public class LargestRectangleInHistogram {
     }
 
     public static void main(String[] args) {
+        int arr[] = {1,1};
 
-        /*
+        largestRectangleArea2ndBestSolution(arr);
+
+        /**
         THE QUESTION STATES THAT WE ARE GIVEN A HISTOGRAM, WE HAVE TO FIND THE LARGEST AREA OF A RECTANGLE
 
         BREAKING DOWN QUESTION
@@ -156,8 +159,13 @@ public class LargestRectangleInHistogram {
         SIMILARLY FOR RS, 4 WOULD BE HAVING RS = 1, 2 WOULD BE HAVING RS = 1, WHICH WOULD HAVE BEEN CORRECT
         ON FINAL ANSWER 1 - 1 WOULD TURN 0, HENCE WE TAKE WHAT WE ARE TAKING
 
+         BASICALLY WHEN WE ARE SUBTRACTING RIGHT BOUNDARY WITH LEFT BOUNDARY WE ARE ALSO SBTRACTING LEFT BOUNDARY
+         FIRST ELEMENT SO TO MAKE SURE THAT ALSO GETS INCLUDED
+
         IN THE END RUN A FOR LOOP AND GET MAX, RS[I] - LS[I] + 1 * ARR[I]
 
+         WHY WE TAKE <= AND NOT <, SUPPOSE FOR 1,1 THE LS WOULD BE[0,1] AND RS WOULD BE [1,1] SO WHILE COMPUTING 0
+         WE WOULD GET MAX OF 1, SO TO AVOID THAT.
 
         BEST SOLUTION
 
@@ -176,6 +184,27 @@ public class LargestRectangleInHistogram {
 
         FOR LOOP RUNS TILL N, BECAUSE WE ALSO NEED TO GET VALUE FOR N-1 TH INDEX, AS IT WONT HAVE ANY FURTHER
         ELEMENTS TO COMPARE WITH
+
+        HERE WIDTH IS JUST RS - LS - 1. WHY IN CASE OF STACK EMPTY, ONLY RS - LS, BECAUSE SAY FOR
+         3 2, WHILE COMPUTING FOR 3, IF WE COMPUTE RS AS 1 AND LS AS 0, IT WOULD GIVE EXACT ANSWER AS 1 ELEMENT, BECAUSE IT
+         BASICALLY DOES NOT HAVE ANY RIGHT BOUNDARY,
+
+         NOW IF IT WAS 2 1 5 6 3, WHILE COMPUTING FOR 5 LEFT BOUNDARY IS 1ST INDEX AND RIGHT BOUNDARY IS 4TH INDEX, NOTICE THAT
+         IN THIS APPRAOCH UNLIKE PREVIOUS WE ARE SUBTRACTING RIGHT BOUNDARY + 1 WITH LEFT BOUNDARY, SO TO ELEMINATE THAT EXTRA
+         ELEMENT WE USE -1. THE ABOVE STATEMENT OF RS - LS IN CASE OF 0 CAN ALSO BE SAID TRUE AS THE ARRAY IS 0 BASED INDEXING
+         SO RIGHT BOUNDARY IS ALREADY -1 HENCE IT GIVES EXACT COUNT WHEN LS IS 0, BUT IF LS HAS VALUE THEN WE MUST DO
+         RS - LS - 1, TO GET THE ANSWER.
+
+         THE ABOVE WIDTH CAN ALSO BE WRITTEN AS
+
+         if(st.isEmpty()) {
+         area = Math.max(area, ele * (rs - ls));
+         }
+         else {
+         ls = st.peek();
+         area = Math.max(area, ele * (rs - ls - 1));
+         }
+
          */
 
     }
