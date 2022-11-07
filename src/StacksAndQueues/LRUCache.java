@@ -4,6 +4,9 @@ import java.util.HashMap;
 
 /**
  * IMPORTANT
+ * Time Complexity:O(N)
+ *
+ * Space Complexity:O(1)
  */
 public class LRUCache {
     Node head = new Node(0,0);

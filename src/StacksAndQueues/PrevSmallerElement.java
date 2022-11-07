@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Stack;
 
 public class PrevSmallerElement {
+    /**
+     * Time Complexity: O(N)
+     *
+     * Space Complexity: O(N)
+     */
     public ArrayList<Integer> prevSmaller(ArrayList<Integer> A) {
 
         Stack<Integer> st = new Stack<>();

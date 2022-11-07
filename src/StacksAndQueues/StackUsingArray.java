@@ -1,6 +1,11 @@
 package StacksAndQueues;
 
 public class StackUsingArray {
+    /**
+     * Time Complexity: O(N)
+     *
+     * Space Complexity: O(N)
+     */
     int arr[];
     StackUsingArray(int length) {
         arr = new int[length];

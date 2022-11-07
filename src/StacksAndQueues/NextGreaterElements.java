@@ -3,6 +3,11 @@ package StacksAndQueues;
 import java.util.Stack;
 
 public class NextGreaterElements {
+    /**
+     * Time Complexity: O(N)
+     *
+     * Space Complexity: O(N)
+     */
     public static int[] nextGreaterElementsBrute(int[] nums) {
         int n = nums.length;
 

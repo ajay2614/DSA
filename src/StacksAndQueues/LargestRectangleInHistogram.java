@@ -6,6 +6,9 @@ public class LargestRectangleInHistogram {
 
     /**
     always start with brute force, then second best, use the best one only if required
+     Time Complexity: O(N*N ) (not sure)
+
+     Space Complexity: O(1)
      */
 
     public int largestRectangleAreaBruteForce(int[] heights) {
@@ -33,6 +36,12 @@ public class LargestRectangleInHistogram {
         return area;
     }
 
+    /**
+     *
+     * Time Complexity: O( N )
+     *
+     * Space Complexity: O(3N) where 3 is for the stack, left small array and a right small array
+     */
     public static int largestRectangleArea2ndBestSolution(int[] heights) {
         Stack<Integer> st = new Stack<>();
 
@@ -79,6 +88,11 @@ public class LargestRectangleInHistogram {
         return max;
     }
 
+    /**
+     *
+     * Time Complexity: O( N ) + O (N)
+     * Space Complexity: O(N)
+     */
     public int largestRectangleAreaBestSolution(int[] heights) {
         Stack<Integer> st = new Stack<>();
 
@@ -205,6 +219,15 @@ public class LargestRectangleInHistogram {
          area = Math.max(area, ele * (rs - ls - 1));
          }
 
+         */
+
+        /**
+         * IMP NOTE
+         *
+         * IN THE FIRST APPROACH
+         *
+         * RATHER THAN WRITING RS - LS + 1, WE CAN ALSO WRITE RS - LS - 1, JUST USE -1 IF NO LEFT SMALLER AND N IF NO RIGHT
+         * SMALLER.
          */
 
     }

@@ -11,6 +11,9 @@ public class StackUsingQueue {
 
     /**
         BRUTE APPROACH
+        Time Complexity: O(N)
+
+        Space Complexity: O(2N)
      */
 //    Queue<Integer> q1 = new LinkedList<>();
 //    Queue<Integer> q2 = new LinkedList<>();
@@ -62,6 +65,11 @@ public class StackUsingQueue {
 //        return false;
 //    }
 
+    /**
+     * Time Complexity: O(N)
+     *
+     * Space Complexity: O(N)
+     */
     Queue<Integer> q1 = new LinkedList<>();
 
     public void push(int x) {

@@ -15,6 +15,9 @@ public class MinStack {
 
     /**
      * BRUTE APPROACH
+     * Time Complexity: O(1)
+     *
+     * Space Complexity: O(2N)
      */
 //    Stack<Pair> stack = new Stack<>();
 //
@@ -44,6 +47,11 @@ public class MinStack {
 //        return stack.peek().min;
 //    }
 
+    /**
+     * Time Complexity: O(1)
+     *
+     * Space Complexity: O(N)
+     */
 
     Stack<Long> st = new Stack<>();
     long min = (long) Math.pow(10,10);

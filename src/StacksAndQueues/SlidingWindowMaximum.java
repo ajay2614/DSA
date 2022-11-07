@@ -4,6 +4,16 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class SlidingWindowMaximum {
+    /**
+     *
+     Time Complexity: O(N^2)
+
+     Reason: One loop for traversing and another to findMax
+
+     Space Complexity: O(K)
+
+     Reason: No.of windows
+     */
     public int[] maxSlidingWindowBrute(int[] nums, int k) {
 
         int n = nums.length;
@@ -21,6 +31,11 @@ public class SlidingWindowMaximum {
         return arr;
     }
 
+    /**
+     Time Complexity: O(N)
+
+     Space Complexity: O(K)
+     */
     public static int[] maxSlidingWindow(int[] nums, int k) {
         int n = nums.length;
         int arr[] = new int[n-k+1];

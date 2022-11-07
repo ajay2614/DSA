@@ -1,6 +1,21 @@
 package StacksAndQueues;
 
 public class QueueUsingArray {
+    /**
+     * Time Complexity:
+     *
+     * pop function: O(1)
+     *
+     * push function: O(1)
+     *
+     * top function: O(1)
+     *
+     * size function: O(1)
+     *
+     * Space Complexity:
+     *
+     * Whole Queue: O(n)
+     */
     int arr[] = new int[1000000];
     int rear = 0;
     int front = 0;

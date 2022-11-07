@@ -8,6 +8,10 @@ public class QueueUsingStack {
 
     /**
      * BRUTE APPROACH
+     *
+     * Time Complexity: O(N )
+     *
+     * Space Complexity: O(2N)
      */
 //    Stack<Integer> s1 = new Stack<>();
 //    Stack<Integer> s2 = new Stack<>();
@@ -55,6 +59,11 @@ public class QueueUsingStack {
 //        return s1.size() == 0;
 //    }
 
+    /**
+     * Time Complexity: O(1 )
+     *
+     * Space Complexity: O(2N)
+     */
     Stack<Integer> s1 = new Stack<>();
     Stack<Integer> s2 = new Stack<>();
 

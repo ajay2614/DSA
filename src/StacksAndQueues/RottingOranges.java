@@ -15,6 +15,17 @@ class  OrangePair {
     }
 }
 public class RottingOranges {
+    /**
+     * Time Complexity: O ( n x n ) x 4
+     *
+     * Reason: Worst-case – We will be making each fresh orange rotten in the grid and for each rotten orange will
+     * check in 4 directions
+     *
+     * Space Complexity: O ( n x n )
+     *
+     * Reason: worst-case –  If all oranges are Rotten, we will end up pushing all rotten oranges into the Queue data structure
+     *
+     * */
     public int orangesRotting(int[][] grid) {
         int n = grid.length;
         int m = grid[0].length;

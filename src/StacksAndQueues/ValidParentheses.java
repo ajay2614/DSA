@@ -4,6 +4,11 @@ import java.util.Stack;
 
 public class ValidParentheses {
 
+    /**
+     * Time Complexity: O(N)
+     *
+     * Space Complexity: O(N)
+     */
     public static boolean isValid(String s) {
         int n = s.length();
 
