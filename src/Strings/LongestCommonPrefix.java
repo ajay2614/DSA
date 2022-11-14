@@ -2,7 +2,11 @@ package Strings;
 
 public class LongestCommonPrefix {
 
-    public static String longestCommonPrefix(String[] strs) {
+    /**
+     *
+     * TC : BIG O(NM)
+     */
+    public static String longestCommonPrefixBrute(String[] strs) {
         String ans = "";
         int minLength = Integer.MAX_VALUE;
         int n = strs.length;
@@ -27,6 +31,36 @@ public class LongestCommonPrefix {
         return ans;
     }
 
+    /**
+     * BIG O(N)
+     * BIG O(1)
+     */
+    public static String longestCommonPrefix(String[] strs) {
+
+        int n = strs.length;
+        if(n == 0)
+            return "";
+        String smallest = strs[0];
+        String largest = strs[0];
+
+        for(int i=1;i<n;i++) {
+            if(strs[i].compareTo(smallest) < 0)
+                smallest = strs[i];
+            else if(strs[i].compareTo(largest) > 0)
+                largest = strs[i];
+        }
+
+        int start = 0;
+        int end = 0;
+        for (int i=0;i<smallest.length();i++) {
+            if(smallest.charAt(i) == largest.charAt(i))
+                end++;
+            else
+                break;
+        }
+        return smallest.substring(start, end);
+    }
+
 
     public static void main(String[] args) {
         /**
@@ -42,7 +76,25 @@ public class LongestCommonPrefix {
          * ALL ARRAY ELEMENTS, THE STAGE WHERE CHAR AT I IS NOT EQUAL, BREAK OUT AND RETURN RESULTANT STRING.
          *
          */
+
+        /**
+         * OPTIMAL APPROACH
+         *
+         * WE WILL SIMPLY HAVE LEXICOGRAPHICALLY SMALLEST STRING AND LARGEST STRING BY USING COMPARE TO
+         * FOR EVERY ARRAY INDEX WITH INITIALLY KEEPING SMALLEST AND LARGEST AS 0TH INDEX STRING.
+         *
+         * NOW AFTER THIS WE WILL SIMPLY MATCH THE CHARACTERS MATCHING, AFTER THIS SIMPLY RETURN THIS AS SUBSTRING
+         * OF 0 AND CHARACTERS MATCHING
+         *
+         * WHY THIS WILL ALWAYS WORK,
+         * SUPPOSE FOR BELOW ARRAY FLIGHT IS SMALLEST LEXICOGRAPHICALLY AND FLOWER IS LARGEST, ONCE AFTER COMPARE TO
+         * WE CAN SIMPLY COMPARE THEIR CHARACTERS MATCHING WHICH ARE FIRST 2, SINCE A CONFUSION MIGHT ARISE THAT FLOW
+         * WAS SMALLER, WHAT IF ANY OTHER SMALLER STRING SAY FL WAS THERE, THEN IT WAS BOUND TO BECOME SMALLEST BY LEXICOGRAPHICAL
+         * COMPARISON.
+         *
+         */
         String arr[] = {"flower","flow","flight"};
+        longestCommonPrefixBrute(arr);
         longestCommonPrefix(arr);
     }
 }

@@ -30,6 +30,33 @@ public class ReverseWordsInAString {
 
         return ans;
     }
+    public static String reverseWordsAlternate(String s) {
+        int n = s.length();
+
+        String ans = "";
+        int i = 0;
+        while(i < n) {
+            while(i < n && s.charAt(i) == ' ') {
+                i++;
+            }
+            if(i >= n) {
+                break;
+            }
+            String res = "";
+            while(i < n && s.charAt(i) != ' ') {
+                res += s.charAt(i);
+                i++;
+            }
+
+            if(ans == "") {
+                ans = res;
+            }
+            else {
+                ans = res + " " + ans;
+            }
+        }
+        return ans;
+    }
 
     public static void main(String[] args) {
         /**
@@ -45,7 +72,14 @@ public class ReverseWordsInAString {
          * AFTER THIS ASSIGN I AS J.
          *
          */
-        String str = "the sky is blue";
-        reverseWords(str);
+
+        /**
+         * IN ALTERNATE ONLY DIFFERENCE IS USING SAME VARIABLE I, AND SINCE THERE COULD BE CASE THAT RES IS EMPTY (WHEN STRING
+         * HAS WHITESPACES AT LAST) FOR EG FOR BELOW HELLO WORLD AFTER ADDING WORLD I IS STILL SMALLER THAN N SO
+         * IN THIS CASE RES WOULD HAVE BEEN EMPTY
+         * SO TO AVOID THAT SIMPLY BREAKING WHEN I CHECKED IS = N.
+         */
+        String str = "  hello world  ";
+        reverseWordsAlternate(str);
     }
 }

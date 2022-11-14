@@ -1,6 +1,10 @@
 package Strings;
 
 public class StringToInteger {
+    /**
+     *
+     * TC : BIG O(N)
+     */
     public static int myAtoi(String s) {
         if(s.equals(""))
             return 0;

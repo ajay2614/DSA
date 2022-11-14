@@ -40,16 +40,6 @@ public class MinimumInsertionsStepsToGetLPS {
         return (n - prev[n]);
     }
     public static void main(String args[]) {
-
-        /*
-        THE LOGIC IS VERY INTERESTING, WE KNOW WITH THE HELP OF LPS WE GET THE LENGTH OF LONGEST PALINDROME SUBSEQUENCE,
-        NOW THE LOGIC IS THE IF WE SUBTRACT THE LPS WITH THE STRING LENGTH WE GET THE MIN NUMBER OF INSERTION STEPS REQUIRED,
-
-        EXAMPLE
-        ABCAA IS A STRING, AAA IS PALINDROME NOW WE NEED TO ADD B AND C IN SUCH A WAY IT BECOMES A PALINDROME, WE CAN DO THIS
-        BY ADDING C AND MAKING STRING AS ABCACA AND THE B TO MAKE IT ABCACBA, WHICH IS 2 STEPS WHICH IS JUST LENGTH - LPS.
-         */
-
         String s= "abcaa";
         System.out.println("The Minimum insertions required to make string palindrome: "+
                 minInsertions(s));
