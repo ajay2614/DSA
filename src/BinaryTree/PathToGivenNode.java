@@ -28,4 +28,19 @@ public class PathToGivenNode {
         ans.remove(ans.size() - 1);
         return false;
     }
+
+    public static void main(String[] args) {
+        /**
+         * IN THIS QUESTION WE HAVE TO FIND THE PATH FOR A NODE
+         *
+         * WE WILL USE RECURSION(INORDER) TO SOLVE THIS, WE WOULD NEED TWO THINGS, TO KNOW WHETHER THE LEFT OR RIGHT PATH IS
+         * CORRECT ONE AND AN ARRAY LIST, SO THAT IS WHY IN THIS WE WILL SOLVE USING BOOLEAN METHOD AND NOT VOID
+         *
+         * APPROACH
+         *
+         * WE WILL USE RECURSIVE BOOLEAN METHOD, EVERY STAGE ADD THE NODE AND THEN CHECK FOR LEFT AND IF THAT IS FALSE CHECK RIGHT
+         *
+         * IF BOTH ARE FALSE, THEN REMOVE THE NODE AS IT IS NOT IN THE PATH.
+         */
+    }
 }

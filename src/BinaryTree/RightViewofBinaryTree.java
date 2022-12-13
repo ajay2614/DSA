@@ -18,4 +18,10 @@ public class RightViewofBinaryTree {
         recursion(node.right, ans, level+1);
         recursion(node.left, ans, level+1);
     }
+
+    public static void main(String[] args) {
+        /**
+         * SAME EXPLANATION AS LEFT VIEW
+         */
+    }
 }

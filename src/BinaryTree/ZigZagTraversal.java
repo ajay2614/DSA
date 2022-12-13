@@ -35,4 +35,12 @@ public class ZigZagTraversal {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        /**
+         * THIS QUESTION CAN SIMPLY BE DONE USING LEVEL ORDER TRAVERSAL, ONLY DIFF IS WE USE A BOOLEAN VARIABLE, SINCE IN
+         * ZIG ZAG, ONE TIME ANS LIST WOULD BE FROM LEFT TO RIGHT AND OTHER TIME RIGHT TO LEFT, SO STORE THE REVERSE
+         * AND KEEP TRACK USING BOOLEAN VARIABLE.
+         */
+    }
 }

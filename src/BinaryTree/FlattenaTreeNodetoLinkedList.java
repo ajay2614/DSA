@@ -71,4 +71,22 @@ public class FlattenaTreeNodetoLinkedList {
             cur.left = null;
         }
     }
+
+    public static void main(String[] args) {
+        /**
+         *
+         * 1ST APPROACH
+         *
+         * THE APPROACH FOR THIS IS THAT EVERYTIME WE HAVE A LEFT NODE, WE ATTACH IT ABOVE THE RIGHT NODE AND PLACE IT AS THE
+         * RIGHT OF ROOT AND MAKING LEFT NULL.
+         *
+         *
+         * 2ND APPROACH(RECURSION)
+         *
+         * IN THIS WE WILL RECURSE THE RIGHT TREE FIRST, AND THEN THE LEFT TREE, USE A DUMMY NODE, HAVE CUR RIGHT AS PREV AND
+         * THEN HAVE CUR AS PREV.
+         *
+         * 3RD APPROACH(NOT TO BE USED IN INTERVIEWS)
+         */
+    }
 }

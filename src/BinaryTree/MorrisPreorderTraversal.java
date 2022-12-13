@@ -36,4 +36,11 @@ public class MorrisPreorderTraversal {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        /**
+         * IT IS ALMOST EXACTLY SAME AS MORRIS INORDER, ONLY DIFF IS THAT SINCE IN THAT WE HAD TO HAVE LEFT FIRST, HERE WE
+         * HAVE TO GET ROOT FIRST, SO NOW WHEN WE FOUND THE NEXT IS NULL MEANS ITS UNVISITED, SO WE ADD THE ROOT IN ANS.
+         */
+    }
 }
