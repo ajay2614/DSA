@@ -16,4 +16,11 @@ public class BSTFromASortedArray {
 
         return node;
     }
+
+    public static void main(String[] args) {
+        /**
+         * SOLUTION IS THROUGH BINARY SEARCH, SIMPLY USE BINARY SEARCH, GET THE MIDDLE THAT IS THE ROOT, FOR LEFT RUN THE SAME
+         * METHOD FROM LOW TO MID-1 AND FOR RIGHT FROM MID + 1 TO HI.
+         */
+    }
 }

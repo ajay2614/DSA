@@ -63,4 +63,28 @@ public class BinarySearchTreeFromPreorder {
 
         return root;
     }
+
+    public static void main(String[] args) {
+        /**
+         *
+         * GIVEN A PREORDER ARRAY WE HAVE TO CREATE A BINARY SEARCH TREE FROM IT
+         *
+         * 3 APPROACHES
+         *
+         * BRUTE
+         *
+         * IN THIS SIMPLY CREATE THE NODE USING FIRST VALUE, AND THEN RUN A FOR LOOP, INSIDE IT A METHOD WHICH PLACES THE NODE
+         * AT ITS CORRECT VALUE BY TRAVERSING TO LEFT AND RIGHT.
+         *
+         * BETTER
+         *
+         * MAKE AND INORDER ARRAY AND MAKE BINARY TREE FROM IT, DONE IN BINARY TREE SECTION
+         *
+         * OPTIMAL
+         *
+         * IN THIS APPROACH WE REALIZE ONE THING THAT WE CAN CREATE BOTH LEFT AND RIGHT IF WE KNOW THE MAX VALUE BY WHICH
+         * IT DOESN'T EXCEED.
+         *
+         */
+    }
 }
