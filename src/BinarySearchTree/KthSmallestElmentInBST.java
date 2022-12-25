@@ -56,4 +56,12 @@ public class KthSmallestElmentInBST {
         }
         return ans;
     }
+
+    public static void main(String[] args) {
+        /**
+         * SINCE WE KNOW INORDER PRODUCES THE RESULT IN A SORTED ORDER, NOW USING INORDER I WE USE A COUNTER THEN WE CAN EASILY
+         * GET THE KTH SMALLEST ELEMENT HOWEVER IF WE USE THE MORRIS INORDER TRAVERSAL INORDER WE CAN GET THE MOST OPTIMAL
+         * SOLUTION.
+         */
+    }
 }
