@@ -31,4 +31,10 @@ public class SizeOfLargestBST {
     public int maxSizeBST(TreeNode root) {
         return getNodeSize(root).size;
     }
+
+    public static void main(String[] args) {
+        /**
+         * SAME AS MAX SUM BST, ONLY FEW DIFFERENCES.
+         */
+    }
 }

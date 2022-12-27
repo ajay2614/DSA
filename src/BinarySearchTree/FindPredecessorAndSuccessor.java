@@ -46,4 +46,10 @@ public class FindPredecessorAndSuccessor {
         }
         return succ;
     }
+
+    public static void main(String[] args) {
+        /**
+         * FOR PREDECESSOR SIMPLY FIND THE FIRST SMALLEST NODE THAN THE ROOT, AND FOR THE SUCCESSOR THE NEXT GREATER NODE
+         */
+    }
 }
