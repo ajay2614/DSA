@@ -60,7 +60,7 @@ public class KosarajusAlgo {
 
     public static void main(String args[]) {
 
-        /*
+        /**
         BENEFITS OF USING THIS ALGO
         * THIS ALGO HELPS US TO FIND STRONGLY CONNECTED COMPONENTS
         * EG. 1 IS DIRECTED TO 2 AND 2 IS DIRECTED TO 3 AND 3 IS DIRECTED TO 1, THIS IS A STRONGLY CONNECTED COMPONENT
@@ -78,7 +78,7 @@ public class KosarajusAlgo {
         ArrayList<ArrayList<Integer>> adj = new ArrayList<ArrayList<Integer>>();
 
         for (int i = 0; i < n; i++)
-            adj.add(new ArrayList<Integer>());
+            adj.add(new ArrayList<>());
 
         adj.get(1).add(3);
         adj.get(2).add(1);
