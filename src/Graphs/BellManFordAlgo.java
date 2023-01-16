@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BellManFordAlgo {
-    /*
+    /**
     ANOTHER ALGO WHICH FINDS SHORTEST DISTANCE BETWEEN EdgePairS
     WHY TO USE THIS ALGO WHEN WE HAVE DIJKSTRAS ALGO
     BECAUSE THIS ALGO HELPS US TO EVEN HAVE NEGETIVE EDGES IN GRAPH
