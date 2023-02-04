@@ -5,6 +5,14 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class AlienDictionary {
+    /**
+     *
+     * Time Complexity: O(N*len)+O(K+E), where N is the number of words in the dictionary, ‘len’ is the length up
+     * to the index where the first inequality occurs, K = no. of nodes, and E = no. of edges.
+     *
+     * Space Complexity: O(K) + O(K)+O(K)+O(K) ~ O(4K), O(K) for the indegree array, and O(K) for the queue data structure
+     * used in BFS(where K = no.of nodes), O(K) for the answer array and O(K) for the adjacency list used in the algorithm.
+     */
     private ArrayList<Integer> topoSort(int k, ArrayList<ArrayList<Integer>> adj) {
 
         int ind[] = new int[k];
@@ -62,5 +70,24 @@ public class AlienDictionary {
         }
 
         return stringBuilder.toString();
+    }
+
+    public static void main(String[] args) {
+        /**
+         * IN THIS QUESTION WE ARE GIVEN AN ARRAY OF STRINGS, HAVING WORDS SUCH AS "baa","abcd","abca","cab","cad"
+         *
+         * THESE ARE SOME RANDOM WORDS IN ALPHABETICAL ORDER FROM ALIEN DICTIONARY
+         * WHAT WE CAN SEE HERE IS IF WE COMPARE BAA AND ABCD, B COMES BEFORE A,
+         * IF WE COMPARE ABCD AND ABCA, THIS MEANS D COMES BEFORE A AND SO ON
+         *
+         * HOW TO SOLVE THIS?
+         *
+         * WHAT WE KNOW IS THAT WE CAN REPRESENT THESE CHARS AS INTEGER BY SUBTRACTING WITH 'a' SO
+         * WE WILL COMPARE 1 STRING WITH THE NEXT AND SO ON TILL THERE IS A DIFFERENT CHARACTER AND PLACE THEM IN AN
+         * ADJACENCY LIST FOR EG WHEN WE COMPARE baa AND abcd, B COMES BEFORE A, SO POINT 2 -> 1, AFTER CREATING THIS LIST
+         * WE WILL SORT THIS LIST USING TOPOLOGICAL SORT
+         *
+         * AFTER SORTING SIMPLY CONVERT THESE INT BACK TO CHARACTER AND ADD IN STRING
+         */
     }
 }

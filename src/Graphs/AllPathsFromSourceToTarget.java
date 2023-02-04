@@ -38,5 +38,10 @@ public class AllPathsFromSourceToTarget {
 
         System.out.println(graph.length);
         System.out.println(graph[0].length);
+
+        /**
+         * WE ARE GIVEN THE SOURCE AS 1ST INDEX AND TARGET AS N INDEX, WE JUST NEED TO FIND ALL THE PATHS
+         * FROM SOURCE TO TARGET SO SIMPLY USE DFS TO TRAVERSE AND KEEP ADDING IN ARRAY LIST THE PATH.
+         */
     }
 }

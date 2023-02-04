@@ -65,6 +65,10 @@ public class Bridges {
 
         printBridges(adj, n);
 
+        String text = "hiheyhello";
+        int index = text.lastIndexOf("h", 4);
+        System.out.println(index);
+
         /**
          * IN THIS QUESTION WE HAVE TO RETURN ALL THE BRIDGES, A BRIDGE IS THAT EDGE WHICH CONNECTS TWO COMPONENTS TOGETHER
          *
