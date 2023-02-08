@@ -1,3 +1,6 @@
+Kosarajus algo helps us to find strongly connected components.
+
+Kruskals algo is also used to find MST.
 Dijkstra’s algorithm finds the shortest path, but Prim’s algorithm finds the MST
 
 Dijkstra's algorithm can work on both directed and undirected graphs, but Prim's algorithm only works on undirected graphs.
@@ -13,3 +16,6 @@ directed graphs with negative weights, as long as we don't have negative cycles.
 Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph.
 This algorithm works for both the directed and undirected weighted graphs. But, it does not work for the graphs with
 negative cycles (where the sum of the edges in a cycle is negative).
+
+The Bellman–Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a
+weighted digraph whereas Floyd-Warshall computes shortest paths from each node to every other node.

@@ -66,5 +66,29 @@ public class MSTUsingPrims {
         int e = 3;
         int arr[][] = {{0, 1, 5}, {1, 2, 3}, {0, 2, 1}};
         spanningTree(v,e, arr);
+
+        /**
+         * GIVEN AN UNDIRECTED GRAPH WE NEED TO FIND THE MST FOR THAT GRAPH
+         *
+         * SPANNING TREE DEFINITION
+         * A tree in which we have n nodes and n-1 edges and all nodes are reachable from each other.
+         *
+         * MST DEFINITION
+         * A minimum spanning tree (MST) or minimum weight spanning tree is a subset of the edges of a connected,
+         * edge-weighted undirected graph that connects all the vertices together, without any cycles and with the
+         * minimum possible total edge weight.
+         *
+         * IN PRIMS ALGORITHM WE USE A PRIORITY QUEUE WHICH WILL SORT BASED ON THE DISTANCE AND VISTIED ARRAY TO CHECK
+         * IF NODE IS REPEATING OR NOT
+         *
+         * FIRST DEFINE PQ WHICH SORTS BASIS OF WEIGHT
+         *
+         * NOW START FROM 0TH NODE, GET ADJACENT NODES OF 0 AND ADD THEM IN PQ IF THEIR DISTANCE IS 0
+         *
+         * NOW ON THE BASIS OF PQ GET THE SMALLEST WEIGHT NODE AND MARK IT VISITED, THE REASON WHY WE MARK IT VISITED
+         * OUTSIDE AND NOT INSIDE WHILE ADDING IN PQ IS THAT SUPPOSE 0 HAS NEIGHBOURING EDGE 1 WITH DIST 4 AND 2 WITH DIST 2
+         * NOW 2 IS ALSO CONNECTED TO 1 WITH DISTANCE 1, SO IF WE ADD IT IN PQ,WE WILL SURELY GET THE DIST 1 NODE 1 AS PQ
+         * WILL SORT, IF DONE OTHERWISE WE WOULD HAVE GOTTEN WRONG ANSWER.
+         */
     }
 }
