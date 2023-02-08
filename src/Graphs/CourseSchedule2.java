@@ -52,4 +52,10 @@ public class CourseSchedule2 {
             return new int[]{};
         return ans;
     }
+
+    public static void main(String[] args) {
+        /**
+         * SAME AS 1ST PART ONLY DIFFERENCE IS IF IT IS TRUE RETURN ORDER TOO
+         */
+    }
 }

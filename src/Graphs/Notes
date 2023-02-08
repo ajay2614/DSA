@@ -1,0 +1,15 @@
+Dijkstra’s algorithm finds the shortest path, but Prim’s algorithm finds the MST
+
+Dijkstra's algorithm can work on both directed and undirected graphs, but Prim's algorithm only works on undirected graphs.
+Prim's algorithm can handle negative edge weights, but Dijkstra's algorithm may fail to accurately compute distances
+if at least one negative edge weight exists.
+
+Dijkstra's algorithm solves the shortest-path problem for any weighted, directed graph with non-negative weights.
+It can handle graphs consisting of cycles, but negative weights will cause this algorithm to produce incorrect results.
+
+The Bellman-Ford algorithm can handle directed and undirected graphs with non-negative weights. However, it can only handle
+directed graphs with negative weights, as long as we don't have negative cycles.
+
+Floyd-Warshall Algorithm is an algorithm for finding the shortest path between all the pairs of vertices in a weighted graph.
+This algorithm works for both the directed and undirected weighted graphs. But, it does not work for the graphs with
+negative cycles (where the sum of the edges in a cycle is negative).

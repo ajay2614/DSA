@@ -38,5 +38,14 @@ public class CheckIfGraphIsBipartiteUsingBFS {
     public static void main(String[] args) {
         int graph[][] = {{1,2,3},{0,2},{0,1,3},{0,2}};
         isBipartite(graph);
+        /**
+         * A BIPARTITE GRAPH IS THAT GRAPH IN WHICH SAY
+         * 1 -> 2 -> 3, AND SAY WE ASSIGN COLOUR A TO 1 AND B TO 2 AND A TO 3, SINCE NO NEIGHBOURING NODE HAS SAME
+         * COLOUR THE FOLLOWING GRAPH IS BIPARTITE
+         *
+         * TO CHECK WE WILL USE BFS APPROACH HERE SIMPLY TRAVERSE THROUGH GRAPH USING BFS AND ASSIGN A COLOUR ARRAY
+         * IF AT ANY POINT TWO NODES HAVE THE SAME COLOUR RETURN FALSE
+         *
+         */
     }
 }

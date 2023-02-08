@@ -36,5 +36,12 @@ public class FindEventualSafeStatesUsingCycleDetection {
 
         Collections.sort(ans);
         return ans;
+        /**
+         * IN THIS QUESTION WE HAVE TO RETURN ALL THE SAFE NODES
+         * SAFE NODES ARE THOSE IN WHICH EVERY POSSIBLE PATH MUST LEAD TO A TERMINAL NODE
+         * A TERMINAL NODE IS THAT WHICH HAS 0 OUTDEGREE
+         *
+         * SIMPLY USE THE DFS CYCLE DETECTION FOR DIRECTED GRAPH HERE.
+         */
     }
 }

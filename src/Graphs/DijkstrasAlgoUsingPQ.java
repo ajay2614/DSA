@@ -15,6 +15,11 @@ class PairDijkstra {
     }
 }
 public class DijkstrasAlgoUsingPQ {
+    /**
+     * Time Complexity: O( E log(V) ), Where E = Number of edges and V = Number of Nodes.
+     *
+     * Space Complexity: O( |E| + |V| ), Where E = Number of edges and V = Number of Nodes.
+     */
     public static List<Integer> shortestPath(int n, int m, int edges[][]) {
 
         ArrayList<ArrayList<PairDijkstra>> adj = new ArrayList<>();
@@ -85,5 +90,45 @@ public class DijkstrasAlgoUsingPQ {
         ans.add(1);
         Collections.reverse(ans);
         return ans;
+    }
+
+    public static void main(String[] args) {
+        /**
+         * DIJKSTRAS ALGO IS USED TO FIND SHORTEST PATH BETWEEN SOURCE AND DISTANCE
+         *
+         * IN THIS WHAT WE HAVE TO DO IS USE A PRIORITY QUEUE, WHY PQ?
+         * EVEN THOUGH QUEUE CAN SOLVE THE SAME WE USE PQ BECAUSE IT IS SORT OF A GREEDY APPROACH, IT WILL CHECK THE SMALLEST
+         * DISTANCE FIRST AND TAKE IT AS OPPOSE TO QUEUE WHICH WOULD HAVE TAKEN LONGER TOO AND THEN FURTHER THERE FOR WASTING
+         * TIME, FOR EG 1 -> 2 -> 3 TAKE DISTANCE 7 AND 1 -> 4 ->3 TAKES 5, A QUEUE WOULD HAVE TAKE 123 PATH TOO AND THEN
+         * PATHS FROM THERE TOO EVEN THOUGH THAT CAN BE EASILY AVOIDED USING 143, HENCE WE USE PQ FOR DIJSKTRA, IN CASE OF
+         * ONLY UNIT DISTANCE OR CONSTANCE THERE IS NO NEED TO TAKE PQ, AS QUEUE WOULD AUTOMATICALLY HAVE THE SMALLEST FIRST
+         *
+         * IN THE ABOVE QUESTION WE HAVE TO RETURN THE NODES FROM WHICH IT WILL TRAVEL THE SHORTEST PATH
+         * WE FIRST DECLARE PQ OF MIN HEAP AND THEN USE A PARENT ARRAY AND DIST ARRAY COMPARING PARENTS AND MIN DISTANCE
+         * RESPECTIVELY, AFTER THE PQ IS EMPTY, WE WILL BE HAVING PARENTS OF EVERY NODE, MEANING NODE FROM WHERE IT COMES
+         * SINCE PARENT OF FIRST NODE WAS MARKED AS 0, WE WILL HAVE ALL THE NODES IN LIST USING CONDITION, WHILE
+         * PAR[NODE] != NODE, WE WILL ADD IT IN ANS AND SINCE NODES WERE ADDED IN REVERSE SIMPLY REVERSE THE ANS AND
+         * RETURN
+         */
+
+        /**
+         * TIME COMPLEXITY DERIVATION
+         *
+         * IN THE WORST CASE THE while(!pq.isEmpty()) WILL TAKE BIG O(V) WHERE V IS NUMBER OF VERTEX
+         * PairDijkstra p = pq.poll() WILL TAKE LOG(HEAP SIZE)
+         * IN THE WORST CASE PairDijkstra nbr : adj.get(node) WILL MEAN THAT WE WILL HAVE TO MULTIPLY
+         * WITH V-1 EDGES
+         *
+         * SO IT WILL BECOME BIG O(V * (LOG(HEAPSIZE) + (LOG(HEAPSIZE) * V - 1))
+         * IN WORST CASE EACH NODE WILL PUSH V-1 NODES EVERYTIME IN THE PQ SO TOTAL IS CLOSE TO V^2
+         *
+         * SIMPLIFYING      BIG O(V * (LOG(V^2) ( 1 * V -1))
+         *                  BIG O(V * (2LOGV) * (V))
+         *                  BIG O(V^2 * LOGV)
+         * NOW TOTAL EDGES IN THE WORST CASE WILL BE EQUIVALENT TO (V-1) * (V), SINCE WORST CASE IS WHEN EACH NODE IS
+         * CONNECTED TO V-1 NODES, (V-1) * (V) IS ALMOST EQUIVALENT TO E SO THE COMPLEXITY IS BIG O(E * LOGV)
+         *
+         *
+         */
     }
 }

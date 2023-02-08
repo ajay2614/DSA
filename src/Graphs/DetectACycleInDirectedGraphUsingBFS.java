@@ -41,4 +41,11 @@ public class DetectACycleInDirectedGraphUsingBFS {
 
         return cnt != V;
     }
+
+    public static void main(String[] args) {
+        /**
+         * WE HAVE TO CHECK WHETHER THE GRAPH IS CYCLIC OR NOT, SIMPLY USE TOPO SORT AND COUNT THE EDGES IF TOTAL EDGES
+         * FROM TOPO CHECK ARE NOT SAME AS TOTAL GRAPH IS ACYCLIC ELSE CYCLIC.
+         */
+    }
 }

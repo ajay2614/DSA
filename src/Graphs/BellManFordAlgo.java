@@ -17,7 +17,21 @@ public class BellManFordAlgo {
 
     public static void bellmanFord(ArrayList<EdgePair> adj, int distance[], int n) {
 
-        for (int i=1;i<=n-1;i++){
+        /**
+         * WHY N-1 ITERATIONS
+         * SUPPOSE A D GRAPH WITH EDGES 1->2->3->4
+         *
+         * IN THE FIRST ITERATION
+         * DIST[2] WILL BE UPDATED VIA 1
+         * IN THE NEXT ITERATION
+         * DIST[3] WILL BE UPDATED VIA 2
+         * IN THE NEXT ITERATION
+         * DIST[4] WILL BE UPDATED VIA 3
+         *
+         * SINCE ABOVE IS THE WORST CASE SCENARIO BECAUSE ONE NODE IS REACHING TO ONLY ONE AT A TIME SO THAT
+         * WE CAN CONFIRM N-1 WILL BE THE MAX WE WILL REQUIRE
+         */
+        for (int i=0;i<n-1;i++){
             for (EdgePair edgePair : adj) {
                 int u = edgePair.getU();
                 int v = edgePair.getV();
