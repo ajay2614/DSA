@@ -62,8 +62,53 @@ public class NumberOfIslands {
         return cnt;
     }
 
+    public static int numIslandsDfs(char[][] grid) {
+        int n = grid.length;
+        int m = grid[0].length;
+
+        int vis[][] = new int[n][m];
+        int cnt = 0;
+        for(int i=0;i<n;i++) {
+            for(int j=0;j<m;j++) {
+                if(grid[i][j] == '1' && vis[i][j] == 0) {
+                    dfs(i, j, grid, vis);
+                    cnt++;
+                }
+            }
+        }
+        return cnt;
+    }
+
+    public static void dfs(int row, int col, char[][] grid, int vis[][]) {
+        int n = grid.length;
+        int m = grid[0].length;
+
+        vis[row][col] = 1;
+        int di[] = {1,0,-1,0};
+        int dj[] = {0,-1,0,1};
+
+        for(int i=0;i<4;i++) {
+            int nR = di[i] + row;
+            int nC = dj[i] + col;
+
+            if(nR >= 0 && nR < n && nC >= 0 && nC < m && grid[nR][nC] == '1' && vis[nR][nC] == 0) {
+                dfs(nR, nC, grid, vis);
+            }
+        }
+    }
+
     public static void main(String[] args) {
         char[][] grid = {{'1','1','0','0','0'}, {'1','1','0','0','0'}, {'0','0','1','0','0'}, {'0','0','0','1','1'}};
-        numIslands(grid);
+        numIslandsDfs(grid);
+
+        /**
+         * IN THIS QUESTION WE NEED TO FIND THE TOTAL ISLANDS, AN ISLAND IS SIMPLY A COMPONENT OF 1
+         * WHICH COULD BE CONNECTED BY ANOTHER 1 ON ITS ADJACENT 4 SIDES, FOR EG THE ABOVE HAS 3 TOTAL COMPONENTS
+         *
+         * TO SOLVE THIS SIMPLY USE BFS OR DFS AND VISITED ARRAY TO MARK VISIT, SIMPLY ITERATE AND WHENEVER YOU GET 1
+         * WHICH HAS NOT BEEN VISITED RUN BFS/DFS FOR IT AND SIMPLY MARK ALL THE 1S IN ITS COMPONENTS VISITED AND
+         * INCREASE THE COUNT THIS WAY WHENEVER WE FIND A 1 THAT HAS NOT BEEN VISITED YET, WE CAN SIMPLY DO THE SAME PROCESS
+         * FOR IT.
+         */
     }
 }

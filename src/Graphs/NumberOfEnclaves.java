@@ -112,4 +112,14 @@ public class NumberOfEnclaves {
         }
         return cnt;
     }
+
+    public static void main(String[] args) {
+        /**
+         * GIVEN A 2D MATRIX OF 0s AND 1s, WE NEED TO FIND THE TOTAL 1s THAT ARE NOT CONNECTED TO EITHER 1ST OR LAST ROW
+         * OR 1ST OR LAST COLUMN,
+         *
+         * SIMPLY USE BFS OR DFS FOR EVERY 1 YOU ENCOUNTER IN FIRST OR LAST ROW/COLUMN AND MARK ALL THE 1ST VISITED, AFTER THAT
+         * SIMPLY ITERATE AND CHECK IF 1 AND VIS IS 0 COUNT IT IN.
+         */
+    }
 }
