@@ -160,7 +160,7 @@ public class BooleanEvaluation {
     }
 
     public static void main(String args[]) {
-        /*
+        /**
         --HARD
 
         THE QUESTION STATES THAT THERE IS A STRING EG T & F | T ^ T
