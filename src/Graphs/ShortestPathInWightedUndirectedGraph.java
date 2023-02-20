@@ -64,8 +64,14 @@ public class ShortestPathInWightedUndirectedGraph {
             ans.add(node);
             node = par[node];
         }
-        ans.add(1);
+        ans.add(1);//NODE IS 1 BECAUSE STARTING NODE IS 1 AND NOT 0
         Collections.reverse(ans);
         return ans;
+    }
+
+    public static void main(String[] args) {
+        /**
+         * SIMPLY DONE VIA DIJKSTRA
+         */
     }
 }

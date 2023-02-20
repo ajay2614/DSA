@@ -3,7 +3,21 @@ package Graphs;
 import java.util.ArrayList;
 import java.util.Stack;
 import java.util.Arrays;
+class Pair {
+    int node;
+    int weight;
+    Pair(int node, int weight) {
+        this.node = node;
+        this.weight = weight;
+    }
+    int getNode() {
+        return this.node;
+    }
 
+    int getWeight() {
+        return this.weight;
+    }
+}
 /**
  * TC : BIG O(N+E) WHERE N IS NUMBER OF NODES AND E IS NUMBER OF EDGES
  * PREFERRED OVER DIJKSTRAS FOR ACYCLIC GRAPH BECAUSE OF ITS COMPLEXITY, AS WITH THIS APPROACH WE ARE FINDING ANSWER SEQUENTIALLY
@@ -67,5 +81,16 @@ public class ShortestPathInDirectedAcyclicGraphAlsoHasAlternateTopo {
         int[][] arr= {{0, 1, 2},{2, 1, 2}, {2, 4, 2} ,{1, 4, 8} ,{1, 3, 6}};
         ShortestPathInDirectedAcyclicGraphAlsoHasAlternateTopo s = new ShortestPathInDirectedAcyclicGraphAlsoHasAlternateTopo();
         s.shortestPath(5,5,arr);
+
+        /**
+         * IN THIS QUESTION AS THE NAME SUGGESTS WE HAVE TO FIND SHORTEST PATH IN A DIRECTED ACYCLIC GRAPH
+         *
+         * TO SOLVE THIS WE CAN USE TOPO SORT SO TO FIRST CATEGORISE NODES ACC TO THEIR INDEGREE
+         * AND THEN SIMPLY USING DISTANCE ARRAY PULL OUT FROM TOPO STACK AND COMPARE DISTANCES AND ADD IN DISTANCE ARRAY
+         *
+         * AFTER THAT SIMPLY POP ELEMENTS FROM STACK AND CHECK FOR DISTANCES FOR THEIR ADJACENT NODES.
+         * SINCE WITH THE HELP OF TOPO WE KNOW WHAT THE NEXT NODE IS TO BE FROM SOURCE SO AND FOR THE ABOVE COMPLEXITY
+         * REASON WE USE THIS ALGO.
+         */
     }
 }

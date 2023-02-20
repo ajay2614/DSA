@@ -53,7 +53,7 @@ public class PrimsAlgoEfficient {
             Nodes nodes = priorityQueue.poll();
             vis[nodes.getVertex()] = true;
             for(Nodes it : adj.get(nodes.getVertex())) {
-                if(vis[it.getVertex()] == false && it.getWeight() < dist[it.getVertex()]) {
+                if(!vis[it.getVertex()] && it.getWeight() < dist[it.getVertex()]) {
                     dist[it.getVertex()] = it.getWeight();
                     parent[it.getVertex()] = nodes.getVertex();
                     priorityQueue.add(new Nodes(it.getVertex(), it.getWeight()));

@@ -54,5 +54,15 @@ public class SurroundedRegions {
         char arr[][] = {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
         SurroundedRegions surroundedRegions = new SurroundedRegions();
         surroundedRegions.solve(arr);
+        /**
+         * IN THIS QUESTION THERE COULD BE SOME Os AMONG X, WHAT WE NEED TO DO IS THAT IF THERE IS AN O WHICH IS NOT
+         * AMONG 1ST ROW, LAST ROW, FIRST COL, LAST COL OR AMONG THE PATH OF THESE THAN WE HAVE TO CONVERT IT TO X
+         *
+         * SIMPLY USE BFS OR DFS FOR 1ST ROW, LAST ROW, FIRST COL AND MARK THE NODES VISITED IF AMONG THEIR PATH
+         *
+         * AFTER THAT IF VISITED IS 0 AND THERE IS 0, WE ARE SURE TO KNOW THEY WEREN'T PART OF ANY PATH FROM 1ST ROW,
+         * LAST ROW, FIRST COL SO SIMPLY CONVERT IT TO X.
+         *
+         */
     }
 }
