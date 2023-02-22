@@ -1,7 +1,5 @@
 package Trie;
 
-import DynamicProgramming.WildcardMatching;
-
 public class Trie2 {
     Node root;
     public Trie2() {

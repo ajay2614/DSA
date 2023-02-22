@@ -85,6 +85,18 @@ public class Trie1 {
         return true;
     }
 
+    public boolean checkIfAllPrefixExist(String word) {
+        Node node = root;
+
+        for(int i=0;i<word.length();i++) {
+            if(node.contains(word.charAt(i))) {
+                node = node.get(word.charAt(i));
+            }
+            if(!node.isEnd())
+                return false;
+        }
+        return true;
+    }
     public static void main(String[] args) {
         Trie1 trie1 = new Trie1();
 
