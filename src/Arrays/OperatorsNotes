@@ -86,7 +86,8 @@ When an input number is positive, where the leftmost bit is 0, then the empty sp
 Let's continue the example using 12 as input.
 
 Now, we will move it by 2 places to the right(12 >>2) and see what will be the final result.
-
+in other words suppose for 1100 which is binary form of 12, on >> right shift by 2, means last two digits will be removed
+regardless of them being 0 or 1, so 1100 will be 11, which is 3.
 The input number is positive, so after shifting to the right by 2 places, the result is 0011, which is 3 in decimal:
 
 @Test

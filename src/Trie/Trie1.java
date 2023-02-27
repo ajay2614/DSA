@@ -97,6 +97,22 @@ public class Trie1 {
         }
         return true;
     }
+    public int countAllSubstrings(String word) {
+
+        int cnt = 0;
+
+        for(int i=0;i<word.length();i++) {
+            Node node = root;
+            for(int j=i;j<word.length();j++) {
+                if(!node.contains(word.charAt(j))) {
+                    node.insert(word.charAt(j), new Node());
+                    cnt++;
+                }
+                node = node.get(word.charAt(j));
+            }
+        }
+        return cnt+1;
+    }
     public static void main(String[] args) {
         Trie1 trie1 = new Trie1();
 
@@ -135,6 +151,16 @@ public class Trie1 {
          * OR END AS TRUE AS WE ARE ONLY CHECKING IF A WORD STARTS WITH GIVEN WORD OR NOT
          *
          *
+         * COUNT ALL SUBSTRINGS
+         * IN THE COUNT ALL SUBSTRINGS, WE ARE GIVEN A STRING AND WE HAVE TO FIND ALL THE DISTINCT SUBSTRINGS OF THAT STRING
+         * , NOW WE COULD HAVE USED BRUTE APPROACH, WHICH IS BY USING SET AND NESTED LOOP TO STORE EVERY SUBSTRING IN SET
+         * BUT THAT COULD HAVE REACHED TO N^3 WHILE STORING IN SET IN WORST COMPLEXITY, SO USING TRIE WHAT WE CAN DO IS
+         * START FROM I LOOP HAVE A NODE INITIALIZED AS ROOT AND START ADDING NODES INTO IT, IF NEW NODE IS ADDED
+         * MEANS IT'S A NEW SUBSTRING, NOW ONCE FOR NEXT ITERATION WE KNOW ROOT WOULD BE HAVING THE SUBSTRINGS POINTED
+         * MEANS ROOT -> A, THEN A IS HAVING B THEN B IS HAVING A, FOR STRING ABA, NOW WHEN YOU ENCOUNTER A NODE ALREADY
+         * PRESENT DON'T INCREASE COUNTER AND SIMPLY GET THAT NODE FOR FURTHER.
+         *
+         * IN THE END WE RETURN COUNT+1 BECAUSE IN THE QUESTION WE HAVE TO ALSO INCLUDE THE EMPTY SUBSTRING
          */
     }
 }
