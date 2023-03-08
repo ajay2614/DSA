@@ -6,6 +6,7 @@ import java.util.Queue;
 
 /**
  * CAN ALSO SAY USING KAHN'S ALGO
+ * TC AND SC SAME AS TOPO
  */
 public class DetectACycleInDirectedGraphUsingBFS {
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {

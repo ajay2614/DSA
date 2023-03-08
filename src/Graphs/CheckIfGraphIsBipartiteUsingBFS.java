@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class CheckIfGraphIsBipartiteUsingBFS {
+    /**
+     * Tc and Sc same as BFS
+     *
+     */
     private static boolean bfs(int col[], int graph[][], int src) {
         col[src] = 1;
         Queue<Integer> q = new LinkedList<>();

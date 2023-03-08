@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class CourseSchedule2 {
+    /**
+     * TC AND SC SAME AS TOPO SORT
+     */
     public int[] findOrder(int numCourses, int[][] prerequisites) {
 
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();

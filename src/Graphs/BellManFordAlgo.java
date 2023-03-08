@@ -15,6 +15,10 @@ public class BellManFordAlgo {
     2. FOR Nth TIME CHECK AGAIN IF THERE IS ANY RELAXATION, THAT MEANS WE HAVE A NEGETIVE CYCLE IN GRAPH
      */
 
+    /**
+     * Time Complexity: O(V*E), where V = no. of vertices and E = no. of Edges.
+     * Space Complexity: O(V) for the distance array which stores the minimized distances.
+     */
     public static void bellmanFord(ArrayList<EdgePair> adj, int distance[], int n) {
 
         /**

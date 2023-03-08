@@ -7,6 +7,11 @@ public class ArticulationPoint {
      * @param tin = time of insertion
      * @param lin = lowest time of insertion
      * @param isArticulation = hashset
+     *
+     * Time Complexity: O(V+2E), where V = no. of vertices, E = no. of edges. It is because the algorithm
+     * is just a simple DFS traversal.
+     *
+     * Space Complexity: O(3V), where V = no. of vertices. O(3V) is for the three arrays i.e. tin, low, and vis, each of size V.
      */
     public static void dfs(ArrayList<ArrayList<Integer>> adj, int node, int parent, int[] tin, int[] lin, int vis[], int timer, int isArticulation[]) {
         vis[node] = 1;

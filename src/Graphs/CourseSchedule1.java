@@ -5,6 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class CourseSchedule1 {
+
+    /**
+     * TC AND SC SAME AS TOPO SORT
+     */
     public boolean canFinish(int numCourses, int[][] prerequisites) {
 
         ArrayList<ArrayList<Integer>> adj = new ArrayList<>();

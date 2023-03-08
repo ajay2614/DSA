@@ -3,6 +3,9 @@ package Graphs;
 import java.util.ArrayList;
 
 public class DetectCycleInDirectedGraphUsingDFS {
+    /**
+     * TC AND SC SAME AS DFS
+     */
     public boolean cycle(int dfs[], int vis[], int src, ArrayList<ArrayList<Integer>> adj) {
         dfs[src] = 1;
         vis[src] = 1;

@@ -17,6 +17,18 @@ class FlightGraph {
     }
 }
 public class CheapestFlightsWithinKStops {
+
+    /**
+     *
+     * Time Complexity: O( N ) { Additional log(N) of time eliminated here because we’re using a simple queue rather than a
+     * priority queue which is usually used in Dijkstra’s Algorithm }.
+     *
+     * Where N = Number of flights / Number of edges.
+     *
+     * Space Complexity:  O( |E| + |V| ) { for the adjacency list, priority queue, and the dist array }.
+     *
+     * Where E = Number of edges (flights.size()) and V = Number of Airports.
+     */
     public static int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
 
         Queue<FlightGraph> q = new LinkedList<>();

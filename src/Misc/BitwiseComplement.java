@@ -50,6 +50,7 @@ public class BitwiseComplement {
          *
          *
          */
+        System.out.println(1 & 1);
         bitwiseComplement(5);
     }
 }

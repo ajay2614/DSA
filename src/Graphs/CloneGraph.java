@@ -21,6 +21,10 @@ class Nodecloned {
     }
 }
 
+/**
+ * TC : BIG O(N + E)
+ * SC : BIG O(N)
+ */
 public class CloneGraph {
     public Nodecloned cloneGraph(Nodecloned nodecloned) {
         if (nodecloned == null)

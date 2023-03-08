@@ -14,6 +14,9 @@ class Pairgraph {
     }
 }
 public class DetectACyleInUndirectedGraphBFS {
+    /**
+     * TC AND SC SAME AS BFS
+     */
     public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
         int[] vis = new int[V];
 

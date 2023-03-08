@@ -5,6 +5,14 @@ import java.util.Arrays;
 
 public class Bridges {
 
+    /**
+     *
+     * Time Complexity: O(V+2E), where V = no. of vertices, E = no. of edges. It is because the algorithm is just a simple
+     * DFS traversal.
+     *
+     * Space Complexity: O(V+2E) + O(3V), where V = no. of vertices, E = no. of edges. O(V+2E) to store the graph in an
+     * adjacency list and O(3V) for the three arrays i.e. tin, low, and vis, each of size V.
+     */
     public static void getBridges(int node, int parent, ArrayList<ArrayList<Integer>> adj, int[] lin, int[] tin, boolean vis[], int timer) {
         vis[node] = true;
         tin[node] = lin[node] = timer++;

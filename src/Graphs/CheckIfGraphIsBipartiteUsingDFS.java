@@ -2,6 +2,7 @@ package Graphs;
 
 public class CheckIfGraphIsBipartiteUsingDFS {
     /**
+     * TC AND SC SAME AS DFS
      * EXPLAINED IN CHECK USING BFS, ONLY APPROACH IS DFS HERE
      */
     private boolean dfs(int c, int src, int[] col, int graph[][]) {

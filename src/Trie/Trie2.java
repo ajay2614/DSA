@@ -1,5 +1,11 @@
 package Trie;
 
+
+/**
+ * Time Complexity: O(N), where n denotes the length of the longest string that we are inserting.
+ *
+ * Space Complexity: O(1), since constant size array created for links.
+ */
 public class Trie2 {
     Node root;
     public Trie2() {

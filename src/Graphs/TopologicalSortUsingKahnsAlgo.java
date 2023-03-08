@@ -5,6 +5,11 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TopologicalSortUsingKahnsAlgo {
+    /**
+     * Time Complexity: O(N+E)
+     *
+     * Space complexity: O(N)+O(N) (USED BY Q AND INDEGREE ARRAY)
+     */
     public static int[] topoSort(int V, ArrayList<ArrayList<Integer>> adj) {
 
         int ind[] = new int[V];

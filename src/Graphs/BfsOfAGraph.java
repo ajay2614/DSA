@@ -5,6 +5,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BfsOfAGraph {
+    /**
+     * Time Complexity: O(N) + O(2E), Where N = Nodes, 2E is for total degrees as we traverse all adjacent nodes.
+     * Space Complexity: O(3N) ~ O(N), Space for queue data structure visited array and an adjacency list
+     */
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         Queue<Integer> q = new LinkedList<>();
         q.offer(0);
