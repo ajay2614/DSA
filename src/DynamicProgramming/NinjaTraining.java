@@ -1,5 +1,5 @@
 package DynamicProgramming;
-
+import java.util.Arrays;
 public class NinjaTraining {
     static int ninjaTraining(int n, int[][] points) {
 
@@ -47,6 +47,35 @@ public class NinjaTraining {
             prev = temp;
         }
         return prev[3];
+    }
+    public static int recursion(int i, int last, int points[][], int n, int[][] dp) {
+        if(i == 0) {
+            int max = 0;
+            for(int j=0;j<3;j++) {
+                if(j != last) {
+                    max = Math.max(points[0][j], max);
+                }
+            }
+            return max;
+        }
+        if(dp[i][last] != -1)
+            return dp[i][last];
+        int max = 0;
+        for(int j=0;j<3;j++) {
+            if(j != last) {
+                max = Math.max(max, points[i][j] + recursion(i-1, j, points, n, dp));
+            }
+        }
+        dp[i][last] = max;
+        return dp[i][last];
+    }
+    public static int ninjaTrainingMemo(int n, int points[][]) {
+        int dp[][] = new int[n][4];
+        for(int arr[] : dp) {
+            Arrays.fill(arr, -1);
+        }
+        return recursion(n-1, 3, points, n, dp);
+
     }
 
 

@@ -46,6 +46,21 @@ public class Triangle {
         return prev[0];
     }
 
+    public static int minimumTotalRecursion(List<List<Integer>> triangle) {
+        return recursion(triangle, 0, 0);
+    }
+
+    public static int recursion(List<List<Integer>> triangle, int row, int col) {
+        if(row == triangle.size()) {
+            return 0;
+        }
+
+        int i = recursion(triangle, row+1, col);
+        int j = recursion(triangle, row+1, col+1);
+
+        return triangle.get(row).get(col) + Math.min(i, j);
+    }
+
     public static void main(String args[]) {
 
         List<List<Integer>> arr = new ArrayList<>();
@@ -63,7 +78,7 @@ public class Triangle {
         arr.get(3).add(8);
         arr.get(3).add(3);
 
-        int v = minimumTotal(arr);
+        int v = minimumTotalRecursion(arr);
 
         System.out.println(v);
     }

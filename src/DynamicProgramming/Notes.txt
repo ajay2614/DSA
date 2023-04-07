@@ -22,3 +22,7 @@ Once the problem has been identified, the following three steps comes handy in s
 ---In a question, try Greedy Approach, if it fails try all possible ways, which is recursion, if there is recursion we can use DP.
 
 ---Whenever there is infinite supply or multiple use like in minimum coins where we can use same coin again, index will remain same;
+
+
+Memoization
+A way to store sub problems in a table/map, so that their answer can be returned rather than evaluating again.

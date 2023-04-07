@@ -1,5 +1,5 @@
 package DynamicProgramming;
-
+import java.util.Arrays;
 public class MinFallingPathSum {
     public static int minFallingPathSum(int[][] matrix) {
         int m = matrix.length;
@@ -68,6 +68,47 @@ public class MinFallingPathSum {
             min = Math.min(min, prev[i]);
         }
         return min;
+    }
+
+    public int minFallingPathSumRecursion(int[][] matrix) {
+        int m = matrix.length;
+        int n = matrix[0].length;
+        int ans = Integer.MAX_VALUE;
+        int dp[][] = new int[m][n];
+        for(int a[] : dp) {
+            Arrays.fill(a, -1);
+        }
+        for(int j=0; j < n; j++) {
+            ans = Math.min(ans, recursion(matrix, 0, j, m, n, dp));
+        }
+        return ans;
+    }
+
+    public int recursion(int[][] matrix, int i, int j, int m, int n, int[][] dp) {
+        if(dp[i][j] != -1)
+            return dp[i][j];
+        int left = Integer.MAX_VALUE;
+        int right = Integer.MAX_VALUE;
+        int below = Integer.MAX_VALUE;
+
+        if(i < m-1 && j != 0) {
+            left = recursion(matrix, i+1, j-1, m, n, dp);
+        }
+        if(i < m-1) {
+            below = recursion(matrix, i+1, j, m, n, dp);
+        }
+        if(i < m-1 && j < n-1) {
+            right = recursion(matrix, i+1, j+1, m, n, dp);
+        }
+
+        if(left == Integer.MAX_VALUE && right == Integer.MAX_VALUE
+                && below == Integer.MAX_VALUE) {
+            dp[i][j] = matrix[i][j];
+            return dp[i][j];
+        }
+
+        dp[i][j] = matrix[i][j] + Math.min(left, Math.min(below, right));
+        return dp[i][j];
     }
 
     public static void main(String[] args) {
