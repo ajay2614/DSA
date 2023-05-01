@@ -1,8 +1,7 @@
 package DynamicProgramming;
-
+import java.util.Arrays;
 public class SubsetSumEqualK {
     public static boolean subsetSumToK(int n, int k, int arr[]){
-        // Write your code here.
         boolean dp[][] = new boolean[n][k+1];
 
         for(int i=0;i<n;i++) {
@@ -57,6 +56,49 @@ public class SubsetSumEqualK {
         return prev[k];
     }
 
+    public static boolean subsetSumToKRecursion(int n, int k, int arr[]){
+        int sum = 0;
+        for(int i=0;i<n;i++) {
+            sum += arr[i];
+        }
+
+        if(sum < k)
+            return false;
+        int dp[][] = new int[n][sum+1];
+
+        for(int[] a : dp) {
+            Arrays.fill(a,-1);
+        }
+        return recursion(n, n-1, k, arr, 0, dp);
+    }
+
+    public static boolean recursion(int n, int ind, int target, int arr[], int sum, int[][] dp) {
+        boolean res = false;
+        if(ind == 0) {
+            res = arr[ind] + sum == target || sum == target;
+            if(res)
+                dp[ind][sum] = 1;
+            else
+                dp[ind][sum] = 0;
+            return res;
+        }
+
+        if(dp[ind][sum] != -1) {
+            return dp[ind][sum] == 1;
+        }
+        boolean pick = recursion(n, ind-1, target, arr, sum + arr[ind], dp);
+        boolean notPick = recursion(n, ind-1, target, arr, sum, dp);
+
+        res = pick || notPick;
+
+        if(res)
+            dp[ind][sum] = 1;
+        else
+            dp[ind][sum] = 0;
+
+        return pick || notPick;
+    }
+
     public static void main(String args[]) {
 
         /**
@@ -72,4 +114,6 @@ public class SubsetSumEqualK {
         else
             System.out.println("Subset with given target not found");
     }
+
+
 }

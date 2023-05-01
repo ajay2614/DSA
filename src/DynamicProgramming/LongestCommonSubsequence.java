@@ -1,5 +1,5 @@
 package DynamicProgramming;
-
+import java.util.Arrays;
 public class LongestCommonSubsequence {
     public static int lcs(String s1, String s2) {
         int n = s1.length();
@@ -35,6 +35,30 @@ public class LongestCommonSubsequence {
         String print = printLcs(dp,s1,s2);
         System.out.println("PRINT LCS -> " + print);
         return dp[n][m];
+    }
+
+    public int longestCommonSubsequenceRecursion(String text1, String text2) {
+        int i1 = text1.length();
+        int i2 = text2.length();
+        int dp[][] = new int[i1][i2];
+        for(int a[] : dp) {
+            Arrays.fill(a, -1);
+        }
+        return recursionDp(i1-1, i2-1, text1, text2, dp);
+    }
+
+    public int recursionDp(int i1, int i2, String s1, String s2, int[][] dp) {
+        if(i1 < 0 || i2 < 0)
+            return 0;
+        if(dp[i1][i2] != -1)
+            return dp[i1][i2];
+        if(s1.charAt(i1) == s2.charAt(i2)) {
+            dp[i1][i2] = 1 + recursionDp(i1-1, i2-1, s1, s2, dp);
+            return dp[i1][i2];
+        }
+        dp[i1][i2] = Math.max(recursionDp(i1-1, i2, s1, s2, dp),
+                recursionDp(i1, i2-1, s1, s2, dp));
+        return dp[i1][i2];
     }
     public static String printLcs(int [][] dp, String s1, String s2) {
         int n = dp.length;

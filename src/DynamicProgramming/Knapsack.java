@@ -15,7 +15,7 @@ public class Knapsack {
         for(int i=1;i<n;i++) {
             for(int cap = 0; cap <= maxWeight; cap++) {
 
-                int notPick = 0 + dp[i-1][cap];
+                int notPick = dp[i - 1][cap];
                 int taken = Integer.MIN_VALUE;
                 if(weight[i] <= cap)
                     taken = dp[i-1][cap - weight[i]] + value[i];

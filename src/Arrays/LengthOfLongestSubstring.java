@@ -71,6 +71,9 @@ public class LengthOfLongestSubstring {
         int max = 0;
         while(r < n) {
             if(map.containsKey(s.charAt(r)))
+                //l coming to either +1 position for eg in abca, l coming to b
+                //or l staying where it is for eg in abcaabc, l was at 4 but b is in 1 that means current substring is
+                //not even considering that b so simply take l
                 l = Math.max(map.get(s.charAt(r)) + 1, l);
 
             map.put(s.charAt(r), r);
